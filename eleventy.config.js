@@ -5,21 +5,18 @@ const pluginRss = require('@11ty/eleventy-plugin-rss');
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const { DateTime } = require('luxon');
 
-module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy({
+module.exports = function (config) {
+  config.addPassthroughCopy({
     './public/': '/',
   });
 
-  eleventyConfig.addPlugin(pluginRss);
-  eleventyConfig.addPlugin(pluginSyntaxHighlight, {
-    preAttributes: { tabindex: 0 },
-  });
+  config.addPlugin(pluginRss);
+  config.addPlugin(pluginSyntaxHighlight, { preAttributes: { tabindex: 0 } });
+  config.addPlugin(pluginNavigation);
+  config.addPlugin(EleventyHtmlBasePlugin);
+  config.addPlugin(pluginBundle);
 
-  eleventyConfig.addPlugin(pluginNavigation);
-  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
-  eleventyConfig.addPlugin(pluginBundle);
-
-  eleventyConfig.addFilter('dateString', (dateObj) => {
+  config.addFilter('dateString', (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
   });
 
