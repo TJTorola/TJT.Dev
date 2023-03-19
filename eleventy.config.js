@@ -22,7 +22,6 @@ module.exports = function (config) {
     'md',
     markdownIt({
       html: true,
-      breaks: true,
       linkify: true,
     }).use(markdownItFootnote),
   );
