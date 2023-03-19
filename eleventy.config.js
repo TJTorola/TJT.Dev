@@ -4,6 +4,8 @@ const pluginBundle = require('@11ty/eleventy-plugin-bundle');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const { DateTime } = require('luxon');
+const markdownIt = require('markdown-it');
+const markdownItFootnote = require('markdown-it-footnote');
 
 module.exports = function (config) {
   config.addPassthroughCopy({
@@ -15,6 +17,15 @@ module.exports = function (config) {
   config.addPlugin(pluginNavigation);
   config.addPlugin(EleventyHtmlBasePlugin);
   config.addPlugin(pluginBundle);
+
+  config.setLibrary(
+    'md',
+    markdownIt({
+      html: true,
+      breaks: true,
+      linkify: true,
+    }).use(markdownItFootnote),
+  );
 
   config.addFilter('dateString', (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');

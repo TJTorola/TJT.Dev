@@ -1,29 +1,31 @@
 {
-	"name": "tjt.dev",
-	"scripts": {
-		"build": "eleventy",
-		"build-ghpages": "eleventy --pathprefix=/eleventy-base-blog/",
-		"start": "eleventy --serve --quiet",
-		"debug": "DEBUG=Eleventy* eleventy",
-		"debugstart": "DEBUG=Eleventy* eleventy --serve --quiet",
-		"benchmark": "DEBUG=Eleventy:Benchmark* eleventy"
-	},
-	"author": {
-		"name": "Tyler Torola",
-		"email": "tjtorola@gmail.com",
-		"url": "tjt.dev"
-	},
-	"license": "MIT",
-	"engines": {
-		"node": ">=14"
-	},
-	"devDependencies": {
-		"@11ty/eleventy": "^2.0.0",
-		"@11ty/eleventy-img": "^3.0.0",
-		"@11ty/eleventy-navigation": "^0.3.5",
-		"@11ty/eleventy-plugin-bundle": "^1.0.3",
-		"@11ty/eleventy-plugin-rss": "^1.2.0",
-		"@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
-		"luxon": "^3.2.1"
-	}
+  "name": "tjt.dev",
+  "scripts": {
+    "build": "eleventy",
+    "build-ghpages": "eleventy --pathprefix=/eleventy-base-blog/",
+    "start": "eleventy --serve --quiet",
+    "debug": "DEBUG=Eleventy* eleventy",
+    "debugstart": "DEBUG=Eleventy* eleventy --serve --quiet",
+    "benchmark": "DEBUG=Eleventy:Benchmark* eleventy"
+  },
+  "author": {
+    "name": "Tyler Torola",
+    "email": "tjtorola@gmail.com",
+    "url": "tjt.dev"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=14"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0",
+    "@11ty/eleventy-img": "^3.0.0",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "@11ty/eleventy-plugin-bundle": "^1.0.3",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
+    "luxon": "^3.2.1",
+    "markdown-it": "^13.0.1",
+    "markdown-it-footnote": "^3.0.3"
+  }
 }
