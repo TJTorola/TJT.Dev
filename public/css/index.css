@@ -36,6 +36,7 @@
 :root {
   --background-color: #fbf1c7;
   --text-color: #3c3836;
+  --text-code-color: #cc241d;
 
   --text-color-link: #989718;
   --text-color-link-active: #b8bb26;
@@ -68,6 +69,11 @@ body {
   font-family: var(--font-family);
   color: var(--text-color);
   background-color: var(--background-color);
+}
+
+code {
+  font-family: var(--font-family);
+  color: var(--text-code-color);
 }
 
 html {
