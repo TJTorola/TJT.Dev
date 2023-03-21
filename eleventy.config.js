@@ -9,7 +9,7 @@ const markdownItFootnote = require('markdown-it-footnote');
 
 module.exports = function (config) {
   config.addPassthroughCopy({
-    './public/': '/',
+    './src/static/': '/',
   });
 
   config.addPlugin(pluginRss);
@@ -35,7 +35,7 @@ module.exports = function (config) {
     markdownTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
     dir: {
-      input: 'src',
+      input: 'src/11ty',
       includes: '/includes',
       data: '/data',
       output: 'www',
