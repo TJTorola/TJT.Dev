@@ -2,7 +2,6 @@
   "name": "tjt.dev",
   "scripts": {
     "build": "eleventy",
-    "build-ghpages": "eleventy --pathprefix=/eleventy-base-blog/",
     "start": "eleventy --serve --quiet",
     "debug": "DEBUG=Eleventy* eleventy",
     "debugstart": "DEBUG=Eleventy* eleventy --serve --quiet",
