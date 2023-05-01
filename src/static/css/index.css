@@ -96,6 +96,10 @@ a[href]:active {
   color: var(--text-color-link-active);
 }
 
+q5-canvas {
+  display: block;
+}
+
 /**
  * BASE STYLES ----------------------------------------------------------------
  */
